@@ -3,7 +3,7 @@ spring:
     name: eureka-peer
 
 server:
-  port: 10000
+  port: 20000
 
 eureka:
   instance:
@@ -13,8 +13,8 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-      defaultZone: http://localhost:10000/eureka/
+      defaultZone: http://localhost:20000/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 0
     enable-self-preservation: true
-    peer-eureka-nodes-update-interval-ms: 10000
+    peer-eureka-nodes-update-interval-ms: 20000
