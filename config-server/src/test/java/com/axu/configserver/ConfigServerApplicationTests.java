@@ -1,4 +1,4 @@
-package com.dn.configserver;
+package com.axu.configserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
