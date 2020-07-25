@@ -10,7 +10,10 @@ spring:
 #          uri: https://github.com/yaojin156/tmp.git
 #          force-pull: true
         ##定义去拉取配置的地址
-          uri: E:\\code\\Java_framework02\\spring-could\\config-server\\src\\main\\resources\\configs
+          uri: https://github.com/shihongxu/configs.git
+          force-pull: true
+          username: shihongxu
+          password: xushihong123
 
 
 management:
