@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev2
+    active: dev
 ---
 spring:
   application:
@@ -29,7 +29,7 @@ server:
 eureka:
   #ÊµÀı
   instance:
-    hostname: dev1
+    hostname: dev
   client:
     ##¼ìË÷·şÎñ
     fetch-registry: false
