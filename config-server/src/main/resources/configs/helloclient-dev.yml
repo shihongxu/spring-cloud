@@ -1,7 +1,21 @@
-name: nick
-age : 19
+spring:
+  #我本地的数据源配置
+  datasource:
+    url: jdbc:mysql://192.168.28.131:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:10000/eureka/
+#mybatis 的配置
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.axu.demo.dao
+
+
+logging:
+  level:
+    com:
+      axu:
+        demo:
+          dao: debug
