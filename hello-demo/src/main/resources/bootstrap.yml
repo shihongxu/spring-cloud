@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    ##要和上面的文件名对应
+    name: helloclient
+  cloud:
+    config:
+      name: helloclient
+      uri : http://localhost:5000/
+  profiles:
+    ##对应文件名后面的环境
+    active: dev
