@@ -12,21 +12,11 @@ spring:
           uri: https://github.com/shihongxu/configs.git
           force-pull: true
 
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
 ##注册中心配置
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
-      defaultZone: http://localhost:10001/eureka/
-    enabled: true
+      defaultZone: http://127.0.0.1:10001/eureka/
 
 #spring:
 #  application:
