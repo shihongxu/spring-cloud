@@ -1,4 +1,4 @@
-package com.axu.hellodemopeer1.config;
+package com.axu.hellodemo.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
