@@ -6,7 +6,7 @@ spring:
   cloud:
     config:
       name: helloclient
-#      uri : http://localhost:5000/
+      #      uri : http://localhost:5000/
       ##将配置中心注册到注册中心， 则这里拿取配置文件的时候配置的就不是URL地址，而是配置中心注册到服务中心的名字
       discovery:
         service-id: config-server

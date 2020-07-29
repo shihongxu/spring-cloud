@@ -11,11 +11,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @RefreshScope
 @EnableDiscoveryClient
 @EnableEurekaClient
-@MapperScan("com.axu.hellodemo.dao")
-public class HelloDemoApplication {
+@MapperScan("com.axu.hellodemopeer1.dao")
+public class HelloDemoPeer1Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(HelloDemoApplication.class, args);
+        SpringApplication.run(HelloDemoPeer1Application.class, args);
     }
 
 }
