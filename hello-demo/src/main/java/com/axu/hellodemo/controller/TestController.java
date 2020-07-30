@@ -26,7 +26,12 @@ public class TestController {
     @GetMapping("/user/getuser")
     @ResponseBody
     public List<User> getUser(@Param("id") String id){
-
+        try {
+            System.out.println("开始休眠！");
+            Thread.sleep(5000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         List<User> userList = userService.getUser(id);
 
         System.out.println();

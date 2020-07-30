@@ -1,5 +1,6 @@
 package com.axu.springcloudribbonclient.controller;
 
+import com.axu.springcloudribbonclient.command.CommandForIndex;
 import com.axu.springcloudribbonclient.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +28,8 @@ public class ConsumerController {
 
         User user = (User)restTemplate.getForObject("http://helloclient/user/getuser?id="+id ,Object.class);
 //        object = restTemplate.getForObject("http://localhost:8080/user/getuser?id=1" ,Object.class);
+        User user1 =(User) new CommandForIndex(id, restTemplate).execute();
 
-        return  user;
+        return  user1;
     }
 }
