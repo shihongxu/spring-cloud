@@ -1,0 +1,44 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: zuul-demo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10001/eureka
+
+############## ################################  zuul 的配置 ###################################################
+zuul:
+  host:
+    ##定义链接超时时间2s
+    connect-timeout-millis: 2000
+    ##定义socke 超时时间
+    socket-timeout-millis: 1000
+    ##定义http连接池大小
+    max-total-connections: 200
+    ##定义每个host的最大连接数
+    max-per-route-connections: 20
+##前缀
+#  prefix:
+  ##如果说一个内部调用的服务id， 我们可以让网关直接忽略
+#  ignored-services: helloclient
+  ribbon-isolation-strategy: SEMAPHORE
+  ##最大信号量
+  semaphore:
+    max-semaphores: 100
+
+  ###################zuul 转发########################
+  routes:
+    route1:
+      ##拦截掉以/axu 开头饿请求
+      path: /axu/**
+      ##转发，url 地址转发
+      url: http://www.baidu.com
+
+    route2:
+      ##拦截掉以/yu 开头，只有一个后缀的请求如  /yu/test 会被拦截，但是/yu/test1/test2 的请求就不会被拦截（这就是一个*和两个** 的区别）
+      path: /yu/*
+      ##通过eureka 转发给相应的服务
+      serviceId: feign-consumer

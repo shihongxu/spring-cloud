@@ -25,11 +25,12 @@ public class ConsumerController {
     public Object index(@RequestParam("id") String id){
 
         Object object = new Object();
+        Object object1 = new Object();
 
-        User user = (User)restTemplate.getForObject("http://helloclient/user/getuser?id="+id ,Object.class);
+        object = restTemplate.getForObject("http://helloclient/user/getuser?id="+id ,Object.class);
 //        object = restTemplate.getForObject("http://localhost:8080/user/getuser?id=1" ,Object.class);
-        User user1 =(User) new CommandForIndex(id, restTemplate).execute();
+        object1 =  new CommandForIndex(id, restTemplate).execute();
 
-        return  user1;
+        return  object1;
     }
 }

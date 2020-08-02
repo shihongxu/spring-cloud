@@ -1,0 +1,25 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: feigen-demo
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10001/eureka
+
+##ø™∆Ùfeign
+feign:
+  hystrix:
+    enabled: true
+
+##…Ë÷√hytrix≈‰÷√
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread :
+            timeoutInMilliseconds: 100
