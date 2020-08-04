@@ -20,12 +20,12 @@ public interface HelloDemoService {
     @RequestMapping(value = "/user",method = RequestMethod.GET)
     public User getByUser(@RequestParam("id")String id);
 
-    @Body("%7B\"orderNo\": \"{orderNo}\"%7D")
+    @Body("%7B\"id\": \"{id}\"%7D")
     @RequestMapping(value = "/user",method = RequestMethod.POST)
-    public int addOrder(@Param("orderNo")String orderNo);
+    public int addOrder(@Param("id")String id);
 
     @RequestMapping(value = "/user",method = RequestMethod.POST)
-    public int addTeacher(@Param("orderNo")String orderNo);
+    public int addUser(@Param("id")String id);
 
 
 

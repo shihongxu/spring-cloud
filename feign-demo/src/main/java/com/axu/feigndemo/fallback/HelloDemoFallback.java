@@ -27,12 +27,12 @@ public class HelloDemoFallback implements HelloDemoService {
     }
 
     @Override
-    public int addOrder(String orderNo) {
+    public int addOrder(String id) {
         return 0;
     }
 
     @Override
-    public int addTeacher(String orderNo) {
+    public int addUser(String id) {
         return 0;
     }
 }
